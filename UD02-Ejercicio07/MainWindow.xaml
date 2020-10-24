@@ -1,0 +1,96 @@
+﻿<Window x:Class="UD02_Ejercicio07.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UD02_Ejercicio07"
+    mc:Ignorable="d"
+    Title="tamaño de un texto"
+    Height="432"
+    Width="910"
+    Icon="/letra.ico">
+    <Grid
+        RenderTransformOrigin="40,0.678">
+        <TextBlock
+            x:Name="textoTextBlock"
+            Margin="38,48,38,0"
+            TextAlignment="Center"
+            Text="Desarrollo de Interfaces"
+            TextWrapping="NoWrap"
+            VerticalAlignment="Top"
+            Height="183"
+            Foreground="#FF2365B4"
+            FontWeight="Bold">
+            <TextBlock.Effect>
+                <DropShadowEffect
+                    ShadowDepth="5"
+                    Direction="330"
+                    Color="Black"
+                    Opacity="1"
+                    BlurRadius="1" />
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <RadioButton
+            x:Name="pequeñoRadioBoton"
+            GroupName="tamano"
+            Content="Pequeño"
+            Tag="36"
+            HorizontalAlignment="Left"
+            Margin="60,301,0,0"
+            VerticalAlignment="Top"
+            Height="17"
+            Width="77"
+            Checked="TamanoRadioBoton_Checked">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform
+                        ScaleX="3"
+                        ScaleY="3" />
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+
+        <RadioButton
+            x:Name="medianoRadioBoton"
+            GroupName="tamano"
+            Content="Mediano"
+            Tag="48"
+            HorizontalAlignment="Left"
+            Margin="341,301,0,0"
+            VerticalAlignment="Top"
+            Height="17"
+            Width="76"
+            IsChecked="true"
+            Checked="TamanoRadioBoton_Checked">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform
+                        ScaleX="3"
+                        ScaleY="3" />
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+
+        <RadioButton
+            x:Name="grandeRadioBoton"
+            Tag="72"
+            GroupName="tamano"
+            Content="Grande"
+            HorizontalAlignment="Left"
+            Margin="614,301,0,0"
+            VerticalAlignment="Top"
+            Height="17"
+            Width="77"
+            Checked="TamanoRadioBoton_Checked">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform
+                        ScaleX="3"
+                        ScaleY="3" />
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+
+    </Grid>
+</Window>
